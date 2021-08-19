@@ -1,0 +1,148 @@
+:root{
+  --bg-blue: #4285F4;
+  --bg-red: #DB4437;
+  --bg-green: #0F9D58;
+  --bg-yellow: #F4B400;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(45deg,var(--bg-blue), var(--bg-green) );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main{
+  width: 500px;
+  height: 400px;
+  border-radius: 15px;
+  background-color: var(--bg-yellow);
+  padding:1rem;
+  display: grid;
+  grid-template-rows: 50px 1fr;
+}
+
+/* todo input component styling */
+.todoInput{
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  align-items: flex-start;
+  justify-content: center;
+}
+.input-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+
+}
+
+/* todo list component stying */
+.todoList{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height:100%;
+  overflow-y: scroll;
+  padding:0 1rem;
+}
+.todo{
+  width: 100%;
+  height:50px;
+  min-height:50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.25rem;
+}
+
+
+
+input{
+  height:35px;
+  line-height: 35px;
+  font-size: 1.25rem;
+  margin:0 0.25rem;
+  border-radius: 5px;
+  padding-left: 0.25rem;
+}
+label{
+  font-size: 1.5rem;
+}
+
+/* button styles */
+.btn{
+  height:35px;
+  width:50px;
+  border-radius: 5px;
+  outline: none;
+  border:0.1rem solid #444;
+  font-size: 0.75rem;
+  color:#fff;
+  cursor: pointer;
+}
+.btn-edit{
+  background-color: var(--bg-green);
+  margin:0 0.2rem;
+}
+.btn-delete{
+  background-color: var(--bg-red);
+}
+.btn-submit{
+  background-color: #333;
+}
+.btn:hover{
+  filter:brightness(1.1);
+}
+
+/* alerts */
+/* .message{
+  display: block;
+  width: 100%;
+  margin:0.5rem 0;
+  height:50px;
+} */
+.danger{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:var(--bg-red);
+  opacity: 0.9;
+  color: #fff;
+  border-radius: 5px;
+  width: 100%;
+  height:50px;
+}
+.success{
+  background-color:var(--bg-green);
+  opacity: 0.9;
+  color: #fff;
+  border-radius: 5px;
+  width: 100%;
+  height:50px;
+}
+.completed{
+  text-decoration: line-through;
+  color:#666;
+}
+.loading{
+  width: 100%;
+  height:100%;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  font-size: 2rem;
+}
